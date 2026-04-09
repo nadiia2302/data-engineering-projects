@@ -1,17 +1,6 @@
 import json
-import os
 
-# try:
-#    with open("task1_d.json","r") as file:
-#     data = json.load(file)
-# except json.JSONDecodeError as e:
-#     print("Failed to load JSON", e)
-#     exit()
-# except FileNotFoundError as e:
-#     print("file not found!",e)
-# exit()
-
-with open ('task1_d.json','r') as file:
+with open ('task1_d.json','r', encoding = "utf-8") as file:
     raw_data = file.read()
     replacements = {
         ":id=>": '"id":',
@@ -26,6 +15,20 @@ with open ('task1_d.json','r') as file:
     for old, new in replacements.items():
         clean_data = clean_data.replace(old, new)
     correct_data = json.loads(clean_data)
-    print(correct_data)
-
-
+    # print(correct_data)
+# print(type(correct_data_dict))
+    data_for_db = []
+    for book in correct_data:
+        raw_price = book.get("price","0")
+        if "$" in raw_price:
+            currency = "$"
+            price = raw_price.replace('$','')
+        elif "€" in raw_price:
+            currency = "€"
+            price = raw_price.replace('€','')
+        else:
+            currency = "$"
+            price = raw_price.replace('$','')
+        # converting to tuple
+        data_for_db.append((str(book.get("id")),book.get("title"),book.get("author"), book.get("genre"), book.get("publisher"), book.get("year"), price,  currency))
+    # print(data_for_db)
