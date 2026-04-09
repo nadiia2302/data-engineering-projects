@@ -17,13 +17,13 @@ Aggregation: Books are grouped by their publication year to calculate counts and
 Precision: Average prices are rounded to 2 decimal places (cents).
 
 ## 📁 Project Structure
-task_1.py: Contains the logic for reading, cleaning, and preparing the raw JSON data.
+- task_1.py: Contains the logic for reading, cleaning, and preparing the raw JSON data.
 
-database.py: Handles the SQLite connection, table creation, data insertion, and the execution of the transformation query.
+- database.py: Handles the SQLite connection, table creation, data insertion, and the execution of the transformation query.
 
-task1_d.json: The raw source data file.
+- task1_d.json: The raw source data file.
 
-books.db: The generated SQLite database file.
+- books.db: The generated SQLite database file.
 
 ## 🛠️ How to Run
 Clone the repository.
