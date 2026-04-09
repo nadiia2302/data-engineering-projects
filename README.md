@@ -1,7 +1,7 @@
 # Book Data Ingestion & Transformation (Task #1)
 This project demonstrates a data engineering pipeline that processes a "corrupted" JSON file, ingests the cleaned data into a relational database (SQLite), and performs analytical transformations directly within the database using SQL.
 
-🚀 Overview
+# 🚀 Overview
 The solution covers the following requirements:
 
 Data Cleaning & Parsing: The source file task1_d.json was not a valid JSON format. I implemented a script to clean the raw string data and convert it into a valid list of Python dictionaries.
