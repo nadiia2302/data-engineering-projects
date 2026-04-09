@@ -1,4 +1,4 @@
-Book Data Ingestion & Transformation (Task #1)
+# Book Data Ingestion & Transformation (Task #1)
 This project demonstrates a data engineering pipeline that processes a "corrupted" JSON file, ingests the cleaned data into a relational database (SQLite), and performs analytical transformations directly within the database using SQL.
 
 🚀 Overview
