@@ -16,7 +16,6 @@ with open ('task1_d.json','r', encoding = "utf-8") as file:
         clean_data = clean_data.replace(old, new)
     correct_data = json.loads(clean_data)
     # print(correct_data)
-# print(type(correct_data_dict))
     data_for_db = []
     for book in correct_data:
         raw_price = book.get("price","0")
